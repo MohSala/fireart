@@ -7,10 +7,10 @@ export default function SelectDifficulty() {
   const [amount, setAmount] = useState(0);
 
   const changeDifficulty = async (e: any) => {
-    await setDifficulty(e.target.value);
+    setDifficulty(e.target.value);
   }
   const changeAmount = async (e: any) => {
-    await setAmount(e.target.value);
+    setAmount(e.target.value);
   }
 
   return (
