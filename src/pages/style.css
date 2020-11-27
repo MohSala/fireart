@@ -1,0 +1,23 @@
+
+.body {
+  background-image: url("../assets/cool-background.png");
+  background-color: #cccccc;
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.header-text {
+text-align: center;
+color: white;
+padding: 20px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card {
+  border-radius: 10px;
+}
