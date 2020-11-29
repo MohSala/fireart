@@ -12,6 +12,7 @@ import {
 export interface FilteredData {
   correct_answer: string,
   question: string,
+  category: string
 }
 
 const getQuestionsData = (data: any) => ({
@@ -48,12 +49,13 @@ export const clearData = () => {
   }
 }
 
-//Filter Data Helper to return question and answer only
+//Filter Data Helper to return question answer and category object
 export const filterateDataObject = (questions: any): FilteredData[] => {
   return questions.map((question: any) => {
     return {
       question: question.question,
-      correct_answer: question.correct_answer
+      correct_answer: question.correct_answer,
+      category: question.category
     }
   })
 }
