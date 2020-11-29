@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 import { FilteredData, storeAnswer } from "../store/actions/quiz"
 import Loader from "../components/common/Loader";
 import "./style.css";
-
+import { decodeHTMLEntities } from "../utilities/HTMLentityDecoder"
 
 type QuizProps = {
   getAllQuestions: FilteredData[];
@@ -53,7 +53,7 @@ function Quiz(props: QuizProps) {
           <form className="quiz-body quiz-form">
             <div className='question-header'>
               {/* chore: decode QUESTION element */}
-              {fetchedQuestions[0].question}
+              {decodeHTMLEntities(fetchedQuestions[0].question)}
             </div>
 
             <div className="form-buttons">

@@ -65,7 +65,7 @@ padding: 20px;
 .form-buttons {
   border-top: 1px solid #ccc;
   display: inline-flex;
-  width: 100%;
+  width: 90%;
   padding: 10px;
   justify-content: space-evenly;
 }
