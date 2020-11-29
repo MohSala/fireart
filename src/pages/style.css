@@ -79,6 +79,44 @@ padding: 20px;
     padding: 10px 20px;
 }
 
+.score-header {
+  margin: 10px 30px 0;
+  text-align: center;
+}
+
+.play-again {
+  background: #1e90ff;
+  color: white;
+}
+
+.list {
+  width: 100%;
+}
+
+.plus {
+  fill: #ff0000;
+  min-width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.minus {
+  fill: #0000ff;
+  min-width: 10px;
+  height: 10px;
+  padding: 5px;
+}
+
+.items {
+  padding: 5px 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
   @media (min-width: 1024px) {
     .body {
       justify-content: center;

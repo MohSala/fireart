@@ -2,7 +2,6 @@ import React, { useEffect, useState, Dispatch } from 'react';
 import { useDispatch, connect } from 'react-redux';
 import { useHistory } from "react-router-dom"
 import { FilteredData, storeAnswer } from "../store/actions/quiz"
-import Loader from "../components/common/Loader";
 import "./style.css";
 import { decodeHTMLEntities } from "../utilities/HTMLentityDecoder"
 
