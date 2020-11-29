@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, connect } from 'react-redux';
-import { getAllQuestions as Q } from "../store/actions/quiz"
-import { useParams } from "react-router-dom";
 import Loader from "../components/common/Loader"
 type QuizProps = {
   difficulty?: string,
@@ -9,26 +7,18 @@ type QuizProps = {
 }
 
 function Quiz(props: any) {
-  const params: any = useParams();
-  const { getAllQuestions, isLoading } = props;
-  let { amount, difficulty } = params
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(Q(amount, difficulty));
-  }, [dispatch]);
+
+  console.log(props.getAllQuestions);
   return (
     <div>
-      {isLoading && <Loader />}
-
+      {/* {isLoading && <Loader />}
       {
-
         getAllQuestions.map((item: { category: React.ReactNode; }, index: string | number | null | undefined) => (
           <div key={index}>
             {item.category}
           </div>
         ))
-      }
-
+      } */}
     </div>
   )
 }

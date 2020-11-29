@@ -16,7 +16,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={SelectDifficulty} />
-            <Route exact path="/quiz/:difficulty/:amount" component={Quiz} />
+            <Route exact path="/quiz" component={Quiz} />
           </Switch>
         </Router>
       </Suspense>
