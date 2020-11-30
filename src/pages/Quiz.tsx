@@ -15,6 +15,7 @@ type QuizProps = {
 function Quiz(props: QuizProps) {
   const { getAllQuestions, answer, isLoading, storeAnswer } = props;
   const [fetchedQuestions, setFetchedQuestions] = useState<FilteredData | FilteredData[]>([]);
+  const [counter, setCounter] = useState<number>(1);
   const history = useHistory();
 
 
@@ -41,6 +42,7 @@ function Quiz(props: QuizProps) {
     storeAnswer(value);
     if (Array.isArray(fetchedQuestions) && fetchedQuestions.length !== 0) {
       fetchedQuestions.shift();
+      setCounter(counter + 1);
     }
   }
 
@@ -51,7 +53,6 @@ function Quiz(props: QuizProps) {
           <h2 className='quiz-body question-header'>{fetchedQuestions[0].category}</h2>
           <form className="quiz-body quiz-form">
             <div className='question-header'>
-              {/* chore: decode QUESTION element */}
               {decodeHTMLEntities(fetchedQuestions[0].question)}
             </div>
 
@@ -59,8 +60,8 @@ function Quiz(props: QuizProps) {
               <button className="form-btn" value='TRUE' onClick={handleClick}>TRUE</button>
               <button className="form-btn" value='FALSE' onClick={handleClick}>FALSE</button>
             </div>
-
           </form>
+          <p className="quiz-body">{counter} of {getAllQuestions.length}</p>
         </div>
       }
     </div>
